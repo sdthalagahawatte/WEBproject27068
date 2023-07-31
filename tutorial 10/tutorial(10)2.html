@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student's NIC Number</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Student's NIC Number</h1>
+
+  <input type="text" id="nicNumber" placeholder="Enter NIC number" />
+
+  <button onclick="getYearOfBirth()">Get Year of Birth</button>
+
+  <p id="yearOfBirth"></p>
+</div>
+
+<script>
+function getYearOfBirth() {
+  var nicNumber = document.getElementById("nicNumber").value;
+  var yearOfBirth = nicNumber.substring(0, 4);
+
+  document.getElementById("yearOfBirth").innerHTML = yearOfBirth;
+}
+</script>
+</body>
+</html>

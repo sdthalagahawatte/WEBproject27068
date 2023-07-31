@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tutorial 04</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+    }
+    .input-group label {
+      flex: 1;
+    }
+    .input-group input[type="radio"],
+    .input-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .input-group textarea {
+      flex: 1;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      flex: 1;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Register Form</h1>
+  <form action="#" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="First Name"required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+
+    <label for="tele">Mobile Number:</label>
+    <input type="tel" id="tele" name="tele" placeholder="+94-12345 5678"required>
+
+    <div class="input-group">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <div class="input-group">
+      <label>Favorite Music:</label>
+      <input type="checkbox" id="pop" name="favMu" value="pop">
+      <label for="pop">Pop</label>
+      <input type="checkbox" id="rock" name="favMu" value="rock">
+      <label for="rock">Rock</label>
+      <input type="checkbox" id="other" name="favMu" value="other">
+      <label for="otherMusic">Other</label>
+    </div>
+
+    <label for="message">Additional Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the terms and conditions</label>
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>

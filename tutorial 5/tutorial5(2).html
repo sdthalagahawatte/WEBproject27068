@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tutorial 05</title>
+  <style>
+  body {
+      font-family: Arial, sans-serif;
+      background-image: url("images/green.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color:white;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: rgba(68, 68, 68, 0.8);
+    }
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+      background-color: rgba(68, 68, 68, 0.8);
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .input-group label {
+      flex: 1;
+    }
+
+    .input-group input[type="radio"],
+    .input-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    input[type="submit"],
+    input[type="button"] {
+      flex: 1;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <form action="#" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+    <div class="input-group">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </div>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="" disabled selected>Select Country</option>
+      <option value="country1">Sri Lanka</option>
+      <option value="country2">USA</option>
+      <option value="country3">New Zealand</option>
+      <!-- Add more countries as needed -->
+    </select>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <input type="checkbox" id="termsOfUse" name="termsOfUse" required>
+    <label for="termsOfUse">I agree to the terms of use</label>
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="button" value="Cancel">
+    </div>
+  </form>
+</body>
+</html>

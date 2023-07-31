@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tutorial 04</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .input-group label {
+      flex: 1;
+    }
+
+    .input-group input[type="radio"],
+    .input-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .input-group textarea,
+    .input-group select {
+      flex: 1;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      flex: 1;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Car Registeration</h1>
+  <form action="#" method="post">
+    <label for="ownerName">Owner Name:</label>
+    <input type="text" id="ownerName" name="ownerName" placeholder="Ower Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+
+    <label for="ph">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="ph"placeholder="Phone Number" required>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="">Select Country</option>
+      <option value="Sri Lanka">Sri Lanka</option>
+      <option value="Japan">Japan</option>
+      <option value="India">India</option>
+      <!-- Add more countries as needed -->
+    </select>
+
+    <label for="carModel">Car Model:</label>
+    <input type="text" id="carModel" name="carModel" required>
+
+    <label for="manufactureYear">Manufacture Year:</label>
+    <select id="manufactureYear" name="manufactureYear" required>
+      <option value="">Select Year</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <!-- Add more years as needed -->
+    </select>
+
+    <div class="input-group">
+      <label>Transmission:</label>
+      <input type="radio" id="manual" name="transmission" value="manual" required>
+      <label for="manual">Manual</label>
+      <input type="radio" id="auto" name="transmission" value="auto">
+      <label for="auto">Auto</label>
+    </div>
+
+    <label for="other">Other - Additional Information:</label>
+    <textarea id="other" name="other" rows="4"></textarea>
+
+    <input type="checkbox" id="condition" name="condition" required>
+    <label for="condition">I agree to the terms and conditions</label>
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>

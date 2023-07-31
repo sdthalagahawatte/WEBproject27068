@@ -1,0 +1,59 @@
+$servername = "localhost";
+$username = "your_database_username";
+$password = "your_database_password";
+$dbname = "university";
+
+try {
+    // Connect to the database
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+    // Set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Fetch student details from the "students" table
+    $sql = "SELECT id, name, email FROM students";
+    $stmt = $conn->query($sql);
+    $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students Details</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Students Details</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <?php foreach ($students as $student) { ?>
+        <tr>
+            <td><?php echo $student['id']; ?></td>
+            <td><?php echo $student['name']; ?></td>
+            <td><?php echo $student['email']; ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+</body>
+</html>
